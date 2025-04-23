@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Flip the coin | devChallenges.io</title>
+
+    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: teal;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .container{
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        max-width: 90%;
+        width: 100%;
+        max-width: 400px;
+      }
+
+
+      .continaer img{
+        width:100%;
+        max-width: 300px;
+        margin: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .container button{
+        padding: 12px 20px;
+        border-radius: 7px;
+        font-size: 18px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .container button:hover{
+        background-color: #0056b3;
+      }
+
+      .author-info{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+        color: rgba(75, 105, 152);
+      }
+
+      @media (max-width:600px){
+        .container h1{
+          font-size: 1.5rem;
+        }
+
+        .container button{
+          font-size: 16px;
+        }
+      }
+
+    
+    </style>
+  </head>
+  <body>
+    <!-- 
+
+    
+    Press the coin or the button to flip the coin
+    Head
+    Tail
+    Random
+  
+    -->
+  <div class="container">
+    <h1>Flip a Coin Game</h1>
+    <h3>Press the coin or the button to flip the coin</h3>
+    <img src="resources/heads.svg" alt="coin" id="coin">
+    <img src="resources/shadow.svg" alt="">
+    <button onclick="flipRandom()">Random</button>
+  </div>
+  </body>
+
+<script>
+  var heads =0
+  var tails = 0
+function flipRandom() {
+  const isHeads = Math.random() < 0.5;
+  if (isHeads) {
+    flip("heads");
+  } else {
+    flip("tails");
+  }
+}
+
+
+  function flip(coin){
+    document.getElementById("coin").src = "/resources/" + coin + ".svg"
+
+  }
+</script>
+</html>
