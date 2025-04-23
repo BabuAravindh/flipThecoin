@@ -43,7 +43,7 @@
       }
 
 
-      .continaer img{
+      .container img{
         width:100%;
         max-width: 300px;
         margin: auto;
@@ -119,11 +119,9 @@ const images = {
   tails: "./resources/tails.svg",
 };
 
+function flip(coin){
+  document.getElementById("coin").src = images[coin];
+}
 
-  function flip(coin){
-    document.getElementById("coin").src = "./resources/heads.svg"; 
-
-
-  }
 </script>
 </html>
