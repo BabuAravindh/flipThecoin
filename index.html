@@ -114,10 +114,15 @@ function flipRandom() {
     flip("tails");
   }
 }
+const images = {
+  heads: "./resources/heads.svg",
+  tails: "./resources/tails.svg",
+};
 
 
   function flip(coin){
-    document.getElementById("coin").src = "/resources/" + coin + ".svg"
+    document.getElementById("coin").src = "./resources/heads.svg"; 
+
 
   }
 </script>
